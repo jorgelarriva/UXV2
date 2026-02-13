@@ -2,7 +2,7 @@ class BuscadorInterno {
     constructor() {
         this.form = document.forms.buscador;
         this.input = this.form.elements.search;
-        this.resultado = this.form.nextElementSibling;
+        this.resultado = document.querySelector("main section");
 
         const lang = document.documentElement.lang;
         this.paginas = (lang === "es")
@@ -91,5 +91,6 @@ class BuscadorInterno {
         this.resultado.innerHTML = html;
     }
 }
+
 
 new BuscadorInterno();
